@@ -19,6 +19,8 @@ To use this in CI, I include the module in the bot's default configuration via `
 
 Then in CI I can set that variable (and the others), and run a CI task which confirms connectivity to the adapter in a given state.
 
+Since Hubot doesn't exit by default, this permits me to have Hubot pop up in a channel, confirm things are working by saying hello with [hubot-startup](https://github.com/bouzuya/hubot-startup), hang around for a few minutes for people to poke, then exit successfully a short time later via this plugin.
+
 ## License
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).

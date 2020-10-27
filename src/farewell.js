@@ -15,10 +15,12 @@ module.exports = (robot) => {
       target = process.env['HUBOT_FAREWELL_TARGET'] || '',
       enabled = process.env['HUBOT_FAREWELL_ENABLED'] || false;
     if (enabled) {
+        robot.logger.info(`Will exit after ${timeout} ms.`)
         setTimeout(() => {
             robot.messageRoom(target, message);
         }, timeout - 2000);
         setTimeout(() => {
+            robot.logger.info(`Exiting after ${timeout} ms.`)
             return process.exit(0);
         }, timeout);    
     }

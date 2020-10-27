@@ -1,0 +1,22 @@
+{
+  "author": {
+    "name": "Chris Burgess",
+    "email": "chris.burgess@catalyst.net.nz"
+  },
+  "description": "Hubot Farewell",
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+  "license": "MIT",
+  "main": "src/farewell.js",
+  "name": "hubot-farewell",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.catalyst.net.nz:chrisburgess/hubot-farewell.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

@@ -20,7 +20,11 @@ export default (robot) => {
   if (enabled) {
     robot.logger.info(`Will exit after ${timeout} ms.`)
     setTimeout(() => {
-      robot.messageRoom(target, message)
+      try {
+        robot.messageRoom(target, message)
+      } catch (e) {
+        robot.logger.info(`Unable to send message to ${target}.`)
+      }
     }, timeout - 2000)
     setTimeout(() => {
       robot.logger.info(`Exiting after ${timeout} ms.`)

@@ -44,7 +44,7 @@ describe('hubot-farewell', () => {
     farewellScript(robot)
 
     const hasTimeoutMessage = loggedMessages.some(([level, msg]) =>
-      level === 'info' && msg.match(/Will exit after \d+ ms\./)
+      level === 'info' && msg.match(/Will exit after \d+ ms\,/)
     )
     assert(hasTimeoutMessage, 'Expected timeout message was not logged')
   })

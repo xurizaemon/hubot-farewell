@@ -18,7 +18,7 @@ export default (robot) => {
 
   console.log(`Will exit after ${timeout} ms.`)
   if (enabled) {
-    robot.logger.info(`Will exit after ${timeout} ms.`)
+    robot.logger.info(`Will exit after ${timeout} ms, messaging ${target}.`)
     setTimeout(() => {
       try {
         robot.messageRoom(target, message)

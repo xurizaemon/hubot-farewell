@@ -1,22 +1,40 @@
 {
-  "author": {
-    "name": "Chris Burgess",
-    "email": "chris.burgess@catalyst.net.nz"
+  "name": "@xurizaemon/hubot-farewell",
+  "version": "2.0.0",
+  "description": "A Hubot script to post a farewell message and quit",
+  "main": "src/farewell.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "lint": "standard"
   },
-  "description": "Hubot Farewell",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:xurizaemon/hubot-startup.git"
+  },
   "keywords": [
     "hubot",
     "hubot-scripts"
   ],
+  "author": {
+    "name": "Chris Burgess",
+    "email": "chris@giantrobot.co.nz"
+  },
   "license": "MIT",
-  "main": "src/farewell.js",
-  "name": "hubot-farewell",
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.catalyst.net.nz:chrisburgess/hubot-farewell.git"
+  "bugs": {
+    "url": "https://github.com/xurizaemon/hubot-farewell/issues"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/xurizaemon/hubot-farewell#readme",
+  "dependencies": {
+    "hubot": "^11"
   },
-  "version": "1.0.0"
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "engines": {
+    "node": ">= 18"
+  },
+  "files": [
+    "src"
+  ]
 }

@@ -15,13 +15,14 @@ export default (robot) => {
   const timeout = process.env.HUBOT_FAREWELL_TIMEOUT || 60000
   const target = process.env.HUBOT_FAREWELL_TARGET || ''
   const enabled = process.env.HUBOT_FAREWELL_ENABLED || false
+  const envelope = { room: target }
 
   console.log(`Will exit after ${timeout} ms.`)
   if (enabled) {
     robot.logger.info(`Will exit after ${timeout} ms, messaging ${target}.`)
     setTimeout(() => {
       try {
-        robot.messageRoom(target, message)
+        robot.send(envelope, message)
       } catch (e) {
         robot.logger.info(`Unable to send message to ${target}.`)
       }

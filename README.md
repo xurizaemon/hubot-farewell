@@ -9,12 +9,13 @@ parent process manager.
 
 The environment variables for configuration are:
 
-| Variable name          | Example value         | Description                         |
-|------------------------|-----------------------|-------------------------------------|
-| HUBOT_FAREWELL_ENABLED | true, false           | Defaults to false                   |
-| HUBOT_FAREWELL_MESSAGE | Goodbye, cruel world! | What to say before exiting.         |
-| HUBOT_FAREWELL_TARGET  | #general              | Where to say goodbye                |
-| HUBOT_FAREWELL_TIMEOUT | 60000                 | Milliseconds between start and quit |
+| Variable name          | Example value         | Description                           |
+| ---------------------- | --------------------- | ------------------------------------- |
+| HUBOT_FAREWELL_ENABLED | true, false           | Defaults to false                     |
+| HUBOT_FAREWELL_MESSAGE | Goodbye, cruel world! | What to say before exiting.           |
+| HUBOT_FAREWELL_TARGET  | #general              | Where to say goodbye                  |
+| HUBOT_FAREWELL_TIMEOUT | 60000                 | Milliseconds between start and quit   |
+| HUBOT_FAREWELL_TIMEIN  | 5000                  | Milliseconds between goodbye and quit |
 
 ## Usage
 

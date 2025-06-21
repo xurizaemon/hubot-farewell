@@ -22,14 +22,15 @@ export default (robot) => {
   console.log(`Will exit after ${timeout} ms.`)
   if (enabled) {
     robot.logger.info(`Will exit after ${timeout} ms, messaging ${target}.`)
-    // If the message is blank, we can exit silently.
-    setTimeout(() => {
-      try {
-        robot.send(envelope, message)
-      } catch (e) {
-        robot.logger.info(`Unable to send message to ${target}.`)
-      }
-    }, timeout - timein)
+    if (message) {
+      setTimeout(() => {
+        try {
+          robot.send(envelope, message)
+        } catch (e) {
+          robot.logger.info(`Unable to send message to ${target}.`)
+        }
+      }, timeout - timein)
+    }
     setTimeout(() => {
       robot.logger.info(`Exiting after ${timeout} ms.`)
       return process.exit(0)
